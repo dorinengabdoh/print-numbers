@@ -3,7 +3,9 @@ let first=document.getElementById('cont1');
 let last=document.getElementById('cont2');
 let mid=document.getElementById('cont3');
 let btn=document.getElementById('conver');
+
 // fonction
+
 function print(start,end) {
       let all=[];
       for(let i=start; i<=end; i++){
