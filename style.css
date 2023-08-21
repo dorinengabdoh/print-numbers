@@ -1,0 +1,36 @@
+body {
+  margin: 0 auto;
+  background-color:rgb(232, 168, 90);
+}
+
+h1 {
+  font-size: 69px;
+  color: #0930f5;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+  margin: auto 700px;
+}
+
+input {
+  padding: 15px;
+
+}
+
+button {
+  padding: 13px;
+}
+.conver:hover {
+background-color: #5e76ef;
+}
+
+.uno {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
