@@ -1,26 +1,28 @@
 'use strict'
-let first=document.getElementById('cont1');
-let last=document.getElementById('cont2');
-let mid=document.getElementById('cont3');
-let btn=document.getElementById('conver');
-// fonction
-function print(start,end) {
-      let all=[];
-      for(let i=start; i<=end; i++){
-         console.log(i); 
-         all.push[i];
-      }
-      return all;
+const start = document.getElementById('cont1')
+const end = document.getElementById('cont3')
+const btn = document.getElementById('conver')
+const display = document.getElementById('cont2')
+
+// Function to generate the range
+
+const range = (start, end) => {
+  const result = [];
+  for (let i = start; i <= end; i++) {
+    result.push(i);
+  }
+  return result;
 }
-
-// display
-
-function display() {
-  let fi =first.value;
-  let mi=mid.value;
-  // let la=last.value
-  const all= print(fi,mi);
-  la =`${all}`;
+// Function to display the range
+const displayRange = () => {
+  const startNumber = parseInt(start.value)
+  const endNumber = parseInt(end.value)
+  if (isNaN(startNumber) || isNaN(endNumber)) {
+    display.value = 'Please enter valid numbers for start and end.'
+  }
+  else {
+    const values = range(startNumber, endNumber)
+    display.value = `${values.join(', ')}`
+  }
 }
-btn.addEventListener('click', display);
-
+btn.addEventListener('click', displayRange);
